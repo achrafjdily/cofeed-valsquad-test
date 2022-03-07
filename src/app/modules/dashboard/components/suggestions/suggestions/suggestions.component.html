@@ -1,0 +1,10 @@
+<div class="suggestion" *ngFor="let suggestion of suggestions">
+    <div class="user">
+        <img [src]="suggestion.user.img" class="user-img">
+        <div class="infos">
+            <span class="name"> {{ suggestion.user.name }} </span>
+            <span class="username"> @{{ suggestion.user.username }} </span>
+        </div>
+    </div>
+    <button [ngClass]="{'followed': suggestion.isFollowed}">{{ suggestion.isFollowed ? "Followed" : "Follow" }}</button>
+</div>

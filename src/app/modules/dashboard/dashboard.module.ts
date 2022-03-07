@@ -1,3 +1,4 @@
+import { SuggestionsStateModule } from './../../store/suggestions-state/suggestions-state.module';
 import { PostsStateModule } from './../../store/posts-state/posts-state.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { StoriesStateModule } from './../../store/stories-state/stories-state.module';
@@ -12,6 +13,10 @@ import { StoriesShellComponent } from './components/stories/stories-shell/storie
 import { StoriesComponent } from './components/stories/stories/stories.component';
 import { FeedShellComponent } from './components/feed/feed-shell/feed-shell.component';
 import { FeedComponent } from './components/feed/feed/feed.component';
+import { SuggestionsShellComponent } from './components/suggestions/suggestions-shell/suggestions-shell.component';
+import { SuggestionsComponent } from './components/suggestions/suggestions/suggestions.component';
+import { LatestActivityShellComponent } from './components/latest-activity/latest-activity-shell/latest-activity-shell.component';
+import { LatestActivityComponent } from './components/latest-activity/latest-activity/latest-activity.component';
 
 
 @NgModule({
@@ -20,13 +25,18 @@ import { FeedComponent } from './components/feed/feed/feed.component';
     StoriesComponent,
     FeedShellComponent,
     FeedComponent,
-    DashboardLayoutComponent
+    DashboardLayoutComponent,
+    SuggestionsShellComponent,
+    SuggestionsComponent,
+    LatestActivityShellComponent,
+    LatestActivityComponent
   ],
   imports: [
     CommonModule,
     DashboardRoutingModule,
     StoriesStateModule,
     PostsStateModule,
+    SuggestionsStateModule,
     FontAwesomeModule
   ]
 })

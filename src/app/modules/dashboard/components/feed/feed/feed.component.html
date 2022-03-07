@@ -5,8 +5,8 @@
         </div>
         <div class="user-interaction">
             <div class="user">
-                <img [src]="post.user.img" class="user-img">
-                <span class="name">{{ post.user.name }}</span>
+                <img [src]="post.user ? post.user.img : '' " class="user-img">
+                <span class="name">{{ post.user ? post.user.name : '' }}</span>
             </div>
             <div class="interactions">
                 <div class="like" [ngClass]="{'liked': post.isLiked}">

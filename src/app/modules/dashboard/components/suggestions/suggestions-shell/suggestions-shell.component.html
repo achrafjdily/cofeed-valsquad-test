@@ -1,0 +1,7 @@
+<div class="suggestions">
+    <div class="title">
+        <h2>Suggestions For You</h2>
+        <a [routerLink]="['#']">See All</a>
+    </div>
+    <app-suggestions [suggestions]="suggestions$ | async"></app-suggestions>
+</div>

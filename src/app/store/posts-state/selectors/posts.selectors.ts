@@ -17,3 +17,8 @@ export const getPostsError = createSelector(
     getPostsFeatureState,
     state => state.error
 )
+
+export const getLatestPost = createSelector(
+    getPostsFeatureState,
+    state => state.latestPost
+)

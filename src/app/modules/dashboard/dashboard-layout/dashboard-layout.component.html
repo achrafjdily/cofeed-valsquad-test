@@ -3,5 +3,31 @@
         <app-stories-shell></app-stories-shell>
         <app-feed-shell></app-feed-shell>
     </div>
-    <div class="side"></div>
+    <div class="side">
+        <div class="fixed">
+            <div class="top-tools">
+                <div class="search">
+                    <fa-icon size="lg" [icon]="faSearch"></fa-icon>
+                    <input placeholder="Search">
+                </div>
+                <div class="notifications">
+                    <div class="new"></div>
+                    <fa-icon size="lg" [icon]="faBell"></fa-icon>
+                </div>
+                <div class="upload">
+                    <fa-icon size="lg" [icon]="faUpload"></fa-icon>
+                </div>
+            </div>
+            <app-suggestions-shell></app-suggestions-shell>
+            <app-latest-activity-shell></app-latest-activity-shell>
+            <div class="links">
+                <div class="link" *ngFor="let link of links;let last=last">
+                    <a [routerLink]="['#']">{{ link }}</a>
+                    <span *ngIf="!last">
+                        &middot;
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

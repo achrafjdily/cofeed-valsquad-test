@@ -1,0 +1,24 @@
+<div class="activity">
+    <div class="post" *ngIf="latestPost">
+        <img [src]="latestPost.img">
+        <div class="infos">
+            <div class="title">{{ latestPost.title }}</div>
+            <div class="interactions">
+                <div class="like" [ngClass]="{'liked': latestPost.isLiked}">
+                    <fa-icon [icon]="faLike"></fa-icon>
+                    <span class="number">{{ latestPost.numberOfLikes }}</span>
+                </div>
+                <div class="comment">
+                    <fa-icon [icon]="faCommentDots"></fa-icon>
+                    <span class="number">{{ latestPost.commentsNumber }}</span>
+                </div>
+                <div class="saved">
+                    <fa-icon [icon]="faBookmark"></fa-icon>
+                    <span class="number">{{ latestPost.saves }}</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <a [routerLink]="['#']">See All Posts</a>
+</div>

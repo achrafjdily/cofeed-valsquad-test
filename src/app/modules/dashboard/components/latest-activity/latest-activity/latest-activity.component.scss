@@ -1,0 +1,72 @@
+.activity {
+    padding: 2rem;
+    border: 2px solid white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: -30px 30px 35px -22px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: -30px 30px 35px -22px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: -30px 30px 35px -22px rgba(0, 0, 0, 0.1);
+    .post {
+        display: flex;
+        width: 100%;
+        gap: 2rem;
+        margin-bottom: 2rem;
+        img {
+            object-fit: cover;
+            width: 10rem;
+            height: 7rem;
+            border: 2px solid white;
+            border-radius: 1rem;
+        }
+        .infos {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .title {
+                font-weight: 600;
+                color: var(--dark-text);
+            }
+            .interactions {
+                display: flex;
+                align-items: center;
+                gap: 2rem;
+                color: var(--light-text);
+                .like {
+                    display: flex;
+                    gap: .5rem;
+                    &.liked {
+                        color: #ff5775;
+                    }
+                    .number {
+                        font-weight: 500;
+                        font-size: .8rem;
+                    }
+                }
+                .comment {
+                    display: flex;
+                    gap: .5rem;
+                    .number {
+                        font-weight: 500;
+                        font-size: .8rem;
+                    }
+                }
+                .saved {
+                    display: flex;
+                    gap: .5rem;
+                    .number {
+                        font-weight: 500;
+                        font-size: .8rem;
+                    }
+                }
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+        font-size: .9rem;
+        font-weight: 600;
+        color: var(--primary);
+    }
+}
