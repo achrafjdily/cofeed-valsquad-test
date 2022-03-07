@@ -1,0 +1,12 @@
+<div class="layout">
+    <div class="topbar">
+        <div class="title">Feeds</div>
+        <div class="tabs">
+            <div>All</div>
+            <div>Following</div>
+            <div>Newest</div>
+            <div class="active">Popular</div>
+        </div>
+    </div>
+    <app-feed [posts]="posts$ | async" (toggleLike)="toggleLike($event)"></app-feed>
+</div>

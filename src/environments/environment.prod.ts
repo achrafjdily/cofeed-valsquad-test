@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  postsApi: "https://valsquad-test.herokuapp.com/api/posts"
 };

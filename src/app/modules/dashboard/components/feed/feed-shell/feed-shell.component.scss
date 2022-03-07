@@ -1,0 +1,25 @@
+.layout {
+    display: flex;
+    flex-direction: column;
+    .topbar {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+        .title {
+            font-weight: bold;
+            color: var(--dark-text);
+            font-size: 1.25rem;
+        }
+        .tabs {
+            display: flex;
+            gap: 1.5rem;
+            div {
+                font-weight: 500;
+                color: var(--light-text);
+                &.active {
+                    color: var(--primary);
+                }
+            }
+        }
+    }
+}

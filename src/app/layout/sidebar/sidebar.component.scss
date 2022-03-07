@@ -1,0 +1,150 @@
+.sidebar {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    padding-right: 2.5rem;
+    height: 100vh;
+    background: linear-gradient(0deg, rgba(238, 240, 248, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    .logo {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding-top: 2.5rem;
+        padding-left: 2.5rem;
+        .image-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: white;
+            padding: 1rem;
+            border-radius: 999rem;
+            box-shadow: -25px 28px 76px -13px rgba(169, 116, 255, 0.76);
+            -webkit-box-shadow: -25px 28px 76px -13px rgba(169, 116, 255, 0.76);
+            -moz-box-shadow: -25px 28px 76px -13px rgba(169, 116, 255, 0.76);
+            img {
+                width: 100%;
+            }
+            width: 2rem;
+        }
+        .text-logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            color: var(--primary);
+            span {
+                text-underline-offset: .25rem;
+                text-decoration: underline;
+            }
+        }
+        // padding-top: 2.5rem;
+        // padding-bottom: 2.5rem;
+        // padding-left: 2.5rem;
+        // padding-right: 2.5rem;
+    }
+    .menu {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        h2 {
+            padding-left: 2.5rem;
+            padding-right: 2.5rem;
+            color: var(--dark-text);
+            font-size: 1.25rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+        }
+        .item {
+            padding-left: 2.5rem;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            display: flex;
+            gap: 1rem;
+            text-decoration: none;
+            text-transform: capitalize;
+            font-weight: 500;
+            &.active {
+                box-shadow: 1px 22px 35px -22px rgba(131, 63, 245, 0.4);
+                -webkit-box-shadow: 1px 22px 35px -22px rgba(131, 63, 245, 0.4);
+                -moz-box-shadow: 1px 22px 35px -22px rgba(131, 63, 245, 0.4);
+                fa-icon {
+                    color: var(--primary);
+                }
+                span {
+                    color: var(--dark-text);
+                }
+            }
+            fa-icon {
+                color: var(--light-text);
+            }
+            span {
+                text-decoration: none;
+                color: var(--light-text);
+            }
+        }
+    }
+    .account {
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        padding-left: 2.5rem;
+        .title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            h2 {
+                color: var(--dark-text);
+                font-weight: 900;
+                font-size: 1.25rem;
+            }
+            fa-icon {
+                color: var(--dark-text);
+            }
+        }
+        .user {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            .user-img {
+                width: 3rem;
+                height: 3rem;
+                object-fit: cover;
+                border-radius: 999rem;
+            }
+            .infos {
+                display: flex;
+                flex-direction: column;
+                gap: .25rem;
+                .name {
+                    color: var(--dark-text);
+                    font-weight: 700;
+                    font-size: 1rem;
+                }
+                .username {
+                    color: var(--light-text);
+                    font-weight: 500;
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+    .app {
+        background-color: white;
+        border-radius: 1rem;
+        margin-top: 2.5rem;
+        margin-left: 2.5rem;
+        padding: .25rem;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+        box-shadow: -10px 10px 35px -22px rgba(169, 116, 255, 0.76);
+        -webkit-box-shadow: -10px 10px 35px -22px rgba(169, 116, 255, 0.76);
+        -moz-box-shadow: -10px 10px 35px -22px rgba(169, 116, 255, 0.76);
+        .app-img {
+            object-fit: cover;
+            border-radius: .75rem;
+            width: 10rem;
+            height: 15rem;
+        }
+    }
+}

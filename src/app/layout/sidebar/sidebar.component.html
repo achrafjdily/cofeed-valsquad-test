@@ -1,0 +1,32 @@
+<div class="sidebar">
+    <div class="logo">
+        <div class="image-logo">
+            <img src="../../../assets/images/logo.svg">
+        </div>
+        <div class="text-logo">C<span>o</span>feed</div>
+    </div>
+    <div class="menu">
+        <h2>Menu</h2>
+        <a [routerLink]="item.route" class="item" *ngFor="let item of menuItems" routerLinkActive="active">
+            <fa-icon [icon]="item.icon" size="lg" [fixedWidth]="true"></fa-icon>
+            <span>{{ item.name }}</span>
+        </a>
+    </div>
+    <div class="account">
+        <div class="title">
+            <h2>Account</h2>
+            <fa-icon [icon]="faAngleDown" size="lg" [fixedWidth]="true"></fa-icon>
+        </div>
+        <div class="user">
+            <img src="https://source.unsplash.com/random/300×300" class="user-img">
+            <div class="infos">
+                <span class="name"> Username </span>
+                <span class="username"> @Username </span>
+            </div>
+        </div>
+    </div>
+    <div class="app">
+        <img src="https://source.unsplash.com/random" class="app-img">
+    </div>
+
+</div>

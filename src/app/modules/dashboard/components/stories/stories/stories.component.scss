@@ -1,0 +1,47 @@
+.stories {
+    display: flex;
+    gap: 2rem;
+    .story {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        .img {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-color: var(--light-text);
+            border-width: .15rem;
+            border-style: solid;
+            padding: .2rem;
+            border-radius: 999rem;
+            &.unviewed {
+                border-color: var(--primary);
+            }
+            img {
+                object-fit: cover;
+                border-radius: 999rem;
+                width: 4rem;
+                height: 4rem;
+            }
+            .add {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(169, 116, 255, 0.75);
+                width: 4rem;
+                height: 4rem;
+                border-radius: 999rem;
+                position: absolute;
+                fa-icon {
+                    color: white;
+                }
+            }
+        }
+        .user {
+            color: var(--dark-text);
+            font-weight: 600;
+        }
+    }
+}

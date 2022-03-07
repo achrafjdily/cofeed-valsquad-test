@@ -1,0 +1,11 @@
+<div class="stories">
+    <div class="story" *ngFor="let story of stories,let first = first;">
+        <div class="img" [ngClass]="{'unviewed': !story.isViewed}">
+            <div class="add" *ngIf="first">
+                <fa-icon [icon]="faAdd" size="lg"></fa-icon>
+            </div>
+            <img [src]="story.user.img">
+        </div>
+        <div class="user">{{ story.user.name }}</div>
+    </div>
+</div>
