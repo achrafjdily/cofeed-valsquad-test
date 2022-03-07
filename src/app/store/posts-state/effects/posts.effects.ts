@@ -19,7 +19,10 @@ export class PostsEffects {
         map(posts => {
           const savedLikes = JSON.parse(localStorage.getItem("liked-posts") || '{}');
           const parsedPosts = posts.map(post => {
-            const savedPost = savedLikes.find((saved: any) => saved.id == post._id);
+            const savedPost = Array.isArray(savedLikes) ? savedLikes.find((saved: any) => saved.id == post._id) : {
+              isLiked: false,
+              numberOfLikes: post.__v
+            };
             return {
               id: post._id,
               user: {
@@ -35,6 +38,7 @@ export class PostsEffects {
           return PostsApiActions.getPostsSuccess({ postsResponse: parsedPosts })
         }),
         catchError(error => {
+          console.log(error)
           return of(PostsApiActions.getPostsFailure({ error }));
         })
       ))
